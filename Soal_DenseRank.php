@@ -15,22 +15,22 @@
             <form action="" class="my-3" method="post">
                 <div class="mb-3">
                     <label for="total_players" class="form-label">Total Player</label>
-                    <input type="number" name="total_players" class="form-control" id="total_players" aria-describedby="Total Players">
+                    <input type="number" name="total_players" class="form-control" id="total_players" aria-describedby="Total Players" <?php if (isset($_POST["total_players"])) echo "value='" . $_POST["total_players"] . "'"; ?>>
                 </div>
 
                 <div class="mb-3">
                     <label for="scores" class="form-label">Scores</label>
-                    <input type="text" name="scores" class="form-control" id="scores" aria-describedby="scoresHelp">
+                    <input type="text" name="scores" class="form-control" id="scores" aria-describedby="scoresHelp" <?php if (isset($_POST["scores"])) echo "value='" . $_POST["scores"] . "'"; ?>>
                     <div class="form-text">(separated by spaces)</div>
                 </div>
 
                 <div class="mb-3">
                     <label for="games" class="form-label">Number of Games:</label>
-                    <input type="number" class="form-control" name="games" id="games" required>
+                    <input type="number" class="form-control" name="games" id="games" required <?php if (isset($_POST["games"])) echo "value='" . $_POST["games"] . "'"; ?>>
                 </div>
                 <div class="mb-3">
                     <label for="gits_scores" class="form-label">Next Score</label>
-                    <input type="text" class="form-control" name="gits_scores" id="gits_scores" required>
+                    <input type="text" class="form-control" name="gits_scores" id="gits_scores" required <?php if (isset($_POST["gits_scores"])) echo "value='" . $_POST["gits_scores"] . "'"; ?>>
                     <div class="form-text">(separated by spaces)</div>
                 </div>
 
@@ -82,6 +82,7 @@
             ?>
         </div>
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
